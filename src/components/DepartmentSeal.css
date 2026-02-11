@@ -1,0 +1,55 @@
+/* === Department Seal === */
+
+.seal {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px double var(--primary);
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  background: #FFF5F6;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.seal-line {
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+  color: var(--primary);
+}
+
+.seal-line--dept {
+  font-size: 0.44rem;
+  margin-top: 1px;
+}
+
+.seal-line--div {
+  font-size: 0.38rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.seal-line--est {
+  font-size: 0.42rem;
+  margin-top: 4px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.seal-divider {
+  width: 30px;
+  height: 1px;
+  background: var(--border);
+  margin: 3px 0;
+}

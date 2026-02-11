@@ -19,6 +19,29 @@
   line-height: 1.4;
 }
 
+/* Processing time notice */
+.file-form-notice {
+  background: #FFFFEA;
+  border: 1px solid var(--border-light);
+  padding: 6px 10px;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.file-form-notice-text {
+  display: block;
+  font-weight: 600;
+}
+
+.file-form-notice-sub {
+  display: block;
+  font-size: 0.68rem;
+  font-style: italic;
+  margin-top: 2px;
+}
+
 .file-form-error {
   background: #fce4e4;
   border: 2px solid var(--danger);

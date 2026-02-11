@@ -122,6 +122,15 @@ function FileIncident({ onFiled, onViewArchive }: Props) {
         Fields marked with * are required.
       </p>
 
+      <div className="file-form-notice">
+        <span className="file-form-notice-text">
+          Current Processing Time for Love Incidents: 2–3 Business Days
+        </span>
+        <span className="file-form-notice-sub">
+          (Expedited vulnerability not available)
+        </span>
+      </div>
+
       {error && <div className="file-form-error">{error}</div>}
 
       {/* Nickname */}

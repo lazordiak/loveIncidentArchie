@@ -4,6 +4,7 @@ function Header() {
   return (
     <div className="muni-header">
       <div className="muni-header-inner">
+        <img className="muni-header-logo" src="/dot.png" alt="NYC Department of Tenderness" />
         <span className="muni-header-item muni-header-city">NYC.gov</span>
         <span className="muni-header-sep">|</span>
         <span className="muni-header-item">NYC Resources</span>

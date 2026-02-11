@@ -16,10 +16,17 @@
 
 /* Title block */
 .app-title-block {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   padding: 20px 8px 12px;
   border-bottom: 3px double var(--border);
   margin-bottom: 0;
+}
+
+.app-title-text {
+  text-align: center;
 }
 
 .app-title {

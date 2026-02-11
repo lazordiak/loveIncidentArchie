@@ -9,13 +9,32 @@
   font-size: 3rem;
   font-weight: 900;
   color: var(--danger);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   border: 6px double var(--danger);
   display: inline-block;
-  padding: 8px 32px;
-  transform: rotate(-4deg);
+  padding: 10px 36px;
+  transform: rotate(-12deg);
   margin-bottom: 24px;
   font-family: 'Courier New', Courier, monospace;
+  opacity: 0.82;
+  text-shadow: 1px 1px 0 rgba(240, 58, 71, 0.15);
+  box-shadow: 1px 2px 0 rgba(240, 58, 71, 0.10);
+  animation: stamp-in 0.4s ease-out both;
+}
+
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-12deg) scale(1.05);
+  }
+  60% {
+    opacity: 0.9;
+    transform: rotate(-12deg) scale(0.98);
+  }
+  100% {
+    opacity: 0.82;
+    transform: rotate(-12deg) scale(1);
+  }
 }
 
 .filed-receipt {

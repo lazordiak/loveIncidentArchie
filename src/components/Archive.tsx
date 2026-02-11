@@ -118,6 +118,23 @@ function Archive() {
 
   return (
     <div className="archive">
+      {/* Total counter */}
+      <div className="archive-total">
+        <span className="archive-total-count">
+          Total Love Incidents Filed: {incidents.length}
+        </span>
+        {incidents.length === 0 && (
+          <span className="archive-total-empty">
+            The archive is currently emotionally unpopulated.
+          </span>
+        )}
+        {(search.trim() || typeFilter) && incidents.length > 0 && (
+          <span className="archive-total-showing">
+            Showing: {filtered.length}
+          </span>
+        )}
+      </div>
+
       {/* Controls */}
       <div className="archive-controls">
         <input
@@ -150,11 +167,6 @@ function Archive() {
             Surprise Me
           </button>
         </div>
-      </div>
-
-      {/* Results count */}
-      <div className="archive-count">
-        {filtered.length} incident{filtered.length !== 1 ? "s" : ""} on file
       </div>
 
       {/* List */}

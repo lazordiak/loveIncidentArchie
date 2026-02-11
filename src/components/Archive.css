@@ -23,6 +23,37 @@
   font-weight: 600;
 }
 
+/* Total incident counter */
+.archive-total {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--primary);
+}
+
+.archive-total-showing {
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.archive-total-empty {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--text-muted);
+  text-transform: none;
+}
+
 /* Controls */
 .archive-controls {
   margin-bottom: 12px;

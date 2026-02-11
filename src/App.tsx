@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import Header from "./components/Header";
 import TendernessTicker from "./components/TendernessTicker";
+import DepartmentSeal from "./components/DepartmentSeal";
 import Archive from "./components/Archive";
 import FileIncident from "./components/FileIncident";
 import "./App.css";
@@ -26,12 +27,15 @@ function App() {
 
       <main className="app-main">
         <div className="app-title-block">
-          <h1 className="app-title">
-            New York City
-            <br />
-            Department of Tenderness
-          </h1>
-          <p className="app-subtitle">Love Incident Archive Portal</p>
+          <div className="app-title-text">
+            <h1 className="app-title">
+              New York City
+              <br />
+              Department of Tenderness
+            </h1>
+            <p className="app-subtitle">Love Incident Archive Portal</p>
+          </div>
+          <DepartmentSeal />
         </div>
 
         <nav className="app-tabs">
