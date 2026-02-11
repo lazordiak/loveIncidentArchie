@@ -1,0 +1,28 @@
+/* === Tenderness Ticker === */
+
+.ticker {
+  display: flex;
+  align-items: center;
+  background: #FFFFEA;
+  border-top: 1px solid #D4A0A8;
+  border-bottom: 1px solid #D4A0A8;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+.ticker-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  margin-right: 10px;
+  color: var(--text);
+}
+
+.ticker-marquee {
+  flex: 1;
+  color: var(--text-muted);
+  min-width: 0;
+}

@@ -1,0 +1,71 @@
+/* === NYC Department of Tenderness — Global Styles === */
+/* Intentionally municipal. Intentionally a bit ugly. */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #F03A47;
+  --primary-dark: #D42F3B;
+  --secondary: #FFC0CB;
+  --accent: #c8a415;
+  --link: #C02030;
+  --bg: #FFF0F2;
+  --card-bg: #ffffff;
+  --border: #D4A0A8;
+  --border-light: #E8C4CA;
+  --text: #1a1a1a;
+  --text-muted: #555555;
+  --danger: #8B0000;
+  --success-bg: #e8f5e9;
+  --badge-bg: #F5DDE0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+  -webkit-font-smoothing: auto;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 700;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+/* Scrollbar — keep it utilitarian */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 0;
+}

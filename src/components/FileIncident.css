@@ -1,0 +1,178 @@
+/* === File Incident Form === */
+
+.file-form {
+  max-width: 100%;
+}
+
+.file-form-title {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.file-form-instruction {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
+.file-form-error {
+  background: #fce4e4;
+  border: 2px solid var(--danger);
+  color: var(--danger);
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+/* Field wrapper */
+.field {
+  margin-bottom: 16px;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.field-input,
+.field-select,
+.field-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--border);
+  background: #ffffff;
+  font-size: 1rem;
+}
+
+.field-input:focus,
+.field-select:focus,
+.field-textarea:focus {
+  outline: 2px solid var(--link);
+  outline-offset: -2px;
+}
+
+.field-input--error {
+  border-color: var(--danger);
+}
+
+.field-input--sub {
+  margin-top: 6px;
+}
+
+.field-error-msg {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--danger);
+  margin-top: 3px;
+}
+
+.field-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.field-char-count {
+  display: block;
+  text-align: right;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Radio group for Era */
+.field-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.field-radio {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border: 2px solid var(--border);
+  background: var(--card-bg);
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.field-radio input[type="radio"] {
+  display: none;
+}
+
+.field-radio--active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* Tenderness buttons */
+.field-tenderness {
+  display: flex;
+  gap: 0;
+}
+
+.field-tenderness-btn {
+  flex: 1;
+  padding: 12px 0;
+  border: 2px solid var(--border);
+  background: var(--card-bg);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.field-tenderness-btn + .field-tenderness-btn {
+  border-left: none;
+}
+
+.field-tenderness-btn--active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.field-tenderness-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 3px;
+  padding: 0 2px;
+}
+
+/* Submit */
+.file-submit {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: 3px solid var(--primary);
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+}
+
+.file-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.file-submit:active:not(:disabled) {
+  background: var(--primary-dark);
+}
