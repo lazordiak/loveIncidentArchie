@@ -11,12 +11,15 @@ jobs:
     steps:
       - name: Ping Supabase
         run: |
+          URL="${{ secrets.SUPABASE_URL }}"
+          URL="${URL%/}"  # strip trailing slash if present
+          URL="$(echo "$URL" | xargs)"  # strip whitespace
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            "${{ secrets.SUPABASE_URL }}/rest/v1/love_incidents?select=id&limit=1" \
+            "${URL}/rest/v1/love_incidents?select=id&limit=1" \
             -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}")
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}") || true
           echo "Response status: $STATUS"
-          if [ "$STATUS" -ne 200 ]; then
+          if [ "$STATUS" != "200" ]; then
             echo "::error::Supabase ping failed with status $STATUS"
             exit 1
           fi
