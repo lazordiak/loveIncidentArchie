@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Header from "./components/Header";
 import TendernessTicker from "./components/TendernessTicker";
 import DepartmentSeal from "./components/DepartmentSeal";
@@ -8,17 +8,33 @@ import "./App.css";
 
 type Tab = "archive" | "file";
 
+function getTabFromHash(): Tab {
+  const hash = window.location.hash.replace("#/", "").replace("#", "");
+  return hash === "file" ? "file" : "archive";
+}
+
 function App() {
-  const [tab, setTab] = useState<Tab>("archive");
+  const [tab, setTab] = useState<Tab>(getTabFromHash);
   const [refreshKey, setRefreshKey] = useState(0);
+
+  const navigate = useCallback((t: Tab) => {
+    window.location.hash = `#/${t}`;
+    setTab(t);
+  }, []);
+
+  useEffect(() => {
+    const onHashChange = () => setTab(getTabFromHash());
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
 
   const handleFiled = useCallback(() => {
     setRefreshKey((k) => k + 1);
   }, []);
 
   const goToArchive = useCallback(() => {
-    setTab("archive");
-  }, []);
+    navigate("archive");
+  }, [navigate]);
 
   return (
     <div className="app">
@@ -41,13 +57,13 @@ function App() {
         <nav className="app-tabs">
           <button
             className={`app-tab ${tab === "archive" ? "app-tab--active" : ""}`}
-            onClick={() => setTab("archive")}
+            onClick={() => navigate("archive")}
           >
             Archive
           </button>
           <button
             className={`app-tab ${tab === "file" ? "app-tab--active" : ""}`}
-            onClick={() => setTab("file")}
+            onClick={() => navigate("file")}
           >
             File Incident
           </button>
